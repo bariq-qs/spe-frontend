@@ -159,3 +159,34 @@ input {
   font-family: inherit;
   font-size: 1rem;
 }
+
+//tablet
+@media screen and (max-width: 1023px) {
+  .top-wrapper {
+    .triangle-wrap {
+      border-bottom: none;
+      border-left: none;
+      border-bottom-left-radius: 0;
+      transform: none;
+      transform-origin: 1px;
+      height: 300px;
+      border-bottom: 50px solid $gallery;
+    }
+
+    .title,
+    .current-time {
+      position: static;
+      text-align: center;
+      margin: 0;
+    }
+
+    .title {
+      font-size: 2rem;
+      margin-top: 200px;
+    }
+
+    .current-time {
+      writing-mode: horizontal-tb;
+    }
+  }
+}

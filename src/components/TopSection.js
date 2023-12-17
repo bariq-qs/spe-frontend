@@ -22,8 +22,8 @@ const TopSection = () => {
 
   return <header className="top-wrapper">
     <div className="triangle-wrap">
-      <p className="current-time">{currentTime}</p>
       <p className="title">{'< SPE / FRONTEND >'}</p>
+      <p className="current-time">{currentTime}</p>
     </div>
   </header>
 }
