@@ -1,0 +1,161 @@
+@import './variable.scss';
+
+.top-wrapper {
+  height: 100vh;
+  background: linear-gradient(to right, $egg-blue, $magenta);
+  position: relative;
+  overflow: hidden;
+
+  .triangle-wrap {
+    width: 100%;
+    position: absolute;
+    height: 600px;
+    background: $cod-gray;
+    border-bottom: 30px solid $gallery;
+    border-left: 30px solid $gallery;
+    border-bottom-left-radius: 50px;
+    transform: rotate(-30deg) skewY(12.5deg) skewX(-5deg);
+    transform-origin: 1px;
+
+  }
+
+  .current-time,
+  .title {
+    position: absolute;
+    color: $green;
+    bottom: 0;
+  }
+
+  .title {
+    font-size: 5rem;
+    margin-left: 7rem;
+  }
+
+  .current-time {
+    writing-mode: vertical-rl;
+    margin-bottom: 7rem;
+    margin-left: 1rem;
+  }
+}
+
+.wrap-shop {
+  background-color: $gallery;
+  padding: 5rem 4rem;
+
+  .title {
+    font-size: 2rem;
+    color: $cod-gray;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .container-tp {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    // display: flex;
+    // flex-direction: column;
+
+    table.table-product {
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+
+      thead tr {
+        background-color: $cod-gray;
+
+        th {
+          text-align: center;
+          text-transform: uppercase;
+          color: $gallery;
+          padding: 1rem 0.5rem;
+          font-weight: 700;
+        }
+
+        th:first-child {
+          width: 70%;
+        }
+      }
+
+      tbody tr {
+        border-bottom: 1px solid $gallery;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        td {
+          text-align: center;
+          vertical-align: middle;
+          padding: 1rem 0.5rem;
+
+          & .col-product {
+            display: flex;
+            gap: 0.5rem;
+
+            img {
+              width: 200px;
+            }
+
+            .code {
+              color: $egg-blue;
+              font-weight: 700;
+              margin-bottom: 0.5rem;
+            }
+
+            .name {
+              color: $cod-gray;
+              font-weight: 700;
+              font-size: 1.2rem;
+              margin-bottom: 0.5rem;
+            }
+
+            .price {
+              color: $cod-gray;
+              margin-bottom: 0.5rem;
+            }
+
+            .stock {
+              color: #EF4444;
+              font-size: 0.75rem;
+            }
+          }
+
+          & .col-qty {
+            display: flex;
+            justify-content: center;
+
+            input {
+              width: 60px;
+              text-align: center;
+              border-radius: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-table {
+      display: flex;
+      padding: 0.5rem 2rem;
+      background-color: $cod-gray;
+      text-transform: uppercase;
+      justify-content: flex-end;
+      gap: 2rem;
+
+      p {
+        color: $gallery;
+        font-weight: 600;
+      }
+    }
+  }
+
+}
+
+input {
+  border: 1px solid $gallery;
+  padding: 8px 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}

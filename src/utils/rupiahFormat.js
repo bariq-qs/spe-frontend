@@ -1,0 +1,1 @@
+export default (nominal) => `IDR. ${Number(nominal).toLocaleString('id-ID')}`
